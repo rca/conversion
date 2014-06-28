@@ -13,10 +13,10 @@ True
 False
 ```
 
-When the function does not find the string can be converted, it will return the
-value unmodified:
+When the function does not find the string can be converted, ValueError is
+raised:
 
 ```
 >>> convert_bool('yup')
-'yup'
+ValueError: invalid truth value 'yup'
 ```
