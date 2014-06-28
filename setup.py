@@ -9,7 +9,7 @@ if not SCRIPT_DIR:
 
 
 setup(name='conversion',
-      version='0.0.1',
+      version='0.0.2',
       description='Utility functions to convert strings to Python types',
       author='Roberto Aguilar',
       author_email='r@rreboto.com',
