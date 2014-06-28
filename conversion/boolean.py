@@ -1,19 +1,19 @@
 """
 String to boolean conversion
 """
+from distutils.util import strtobool
+
 __all__ = ['convert_bool']
 
 
 def convert_bool(value):
     """
-    Returns the value as a boolean if appropriate
+    Returns the value as a boolean
 
-    The value is converted into a boolean if possible. The value will be
-    returned unmodified if no suitable conversion found.
+    The value is converted into a boolean if possible. ValueError is raised
+    when the value cannot be converted.
     """
-    if value.lower() in ('yes', 'true', '1'):
-        value = True
-    elif value.lower() in ('no', 'false', '0', ''):
-        value = False
+    if value == '':
+        return False
 
-    return value
+    return bool(strtobool(value))
