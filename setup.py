@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 
-from distutils.core import setup
+from setuptools import setup
 
 SCRIPT_DIR = os.path.dirname(__file__)
 if not SCRIPT_DIR:
