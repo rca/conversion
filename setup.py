@@ -17,5 +17,5 @@ setup(
     packages=["conversion"],
     long_description=open("README.md").read(),
     url="http://github.com/rca/conversion",
-    license="LICENSE.txt",
+    license="LICENSE",
 )
