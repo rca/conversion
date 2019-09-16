@@ -10,7 +10,7 @@ if not SCRIPT_DIR:
 
 setup(
     name="conversion",
-    version="0.0.3",
+    use_scm_version=True,
     description="Utility functions to convert strings to Python types",
     author="Roberto Aguilar",
     author_email="r@rreboto.com",
