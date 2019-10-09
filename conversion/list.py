@@ -1,8 +1,8 @@
-def convert_list(value: str, delimeter=",", raise_exception=True) -> list:
+def convert_list(value: str, delimiter=",", raise_exception=True) -> list:
     converted = value
 
     try:
-        converted = [x.strip() for x in value.split(delimeter)]
+        converted = [x.strip() for x in value.split(delimiter)]
     except Exception as exc:
         if raise_exception:
             raise

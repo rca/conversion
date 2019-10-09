@@ -5,16 +5,16 @@ from nose.tools import assert_equal
 from conversion import convert_list
 
 
-def test_delimeter():
+def test_delimiter():
     """
-    Ensure the delimeter kwarg is used
+    Ensure the delimiter kwarg is used
     """
-    assert_equal(["a", "b"], convert_list("a:b", delimeter=":"))
+    assert_equal(["a", "b"], convert_list("a:b", delimiter=":"))
 
 
 def test_single_element():
     """
-    Ensure a string without a delimeter is returned as a single element list
+    Ensure a string without a delimiter is returned as a single element list
     """
     assert_equal(["a"], convert_list("a"))
 
