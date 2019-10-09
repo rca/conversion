@@ -1,4 +1,11 @@
-def convert_list(value: str, delimiter=",", raise_exception=True) -> list:
+"""
+delimited list conversion
+"""
+
+__all__ = ["convert_list"]
+
+
+def convert_list(value: str, delimiter=",", raise_exceptions=True) -> list:
     converted = value
 
     if not value:
@@ -7,7 +14,7 @@ def convert_list(value: str, delimiter=",", raise_exception=True) -> list:
     try:
         converted = [x.strip() for x in value.split(delimiter)]
     except Exception as exc:
-        if raise_exception:
+        if raise_exceptions:
             raise
 
     return converted

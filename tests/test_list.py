@@ -1,6 +1,6 @@
 import datetime
 
-from nose.tools import assert_equal
+from nose.tools import assert_equal, assert_raises
 
 from conversion import convert_list
 
@@ -17,6 +17,13 @@ def test_empty_list():
     Ensure an empty string returns an empty list
     """
     assert_equal([], convert_list(""))
+
+
+def test_exception_raised():
+    """
+    Ensure string conversion kwarg works
+    """
+    assert_raises(TypeError, convert_list, b"notstring", raise_exceptions=True)
 
 
 def test_empty_list_on_none():
