@@ -1,7 +1,8 @@
 """
 String to boolean conversion
 """
-from distutils.util import strtobool
+
+from .compat import str2bool
 
 __all__ = ["convert_bool"]
 
@@ -16,4 +17,4 @@ def convert_bool(value):
     if value == "":
         return False
 
-    return bool(strtobool(value))
+    return bool(str2bool(value))
