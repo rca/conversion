@@ -1,6 +1,4 @@
-import unittest
-
-from nose.tools import assert_equal
+import pytest
 
 from conversion import convert_bool
 
@@ -9,20 +7,21 @@ def test_empty_string():
     """
     Specifically test that an empty string returns False
     """
-    assert_equal(False, convert_bool(""))
+    convert_bool("") == False
 
 
-def test_false():
+@pytest.mark.parametrize("value", ("no", "n", "false", "f", "0"))
+def test_false(value):
     """
     Ensure all expected strings return False
     """
-    for value in ("no", "n", "false", "f", "0"):
-        yield assert_equal, False, convert_bool(value)
+
+    assert convert_bool(value) == False
 
 
-def test_true():
+@pytest.mark.parametrize("value", ("yes", "y", "true", "t", "1"))
+def test_true(value):
     """
     Ensure all expected strings return True
     """
-    for value in ("yes", "y", "true", "t", "1"):
-        yield assert_equal, True, convert_bool(value)
+    assert convert_bool(value)
